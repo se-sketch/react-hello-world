@@ -6,12 +6,13 @@ function Greet(){
 }
 */
 
-const Greet = (props) => {
-	console.log(props.children);
+const Greet = props => {
+	const {name, heroName} = props;
+	//console.log(props.children);
 	//props.name = 'Vishwas';
-	return (<div>
-		<h1>hello {props.name} a.k.a {props.heroName}</h1>	
-		{props.children}
+	return (
+		<div>
+			<h1>hello {name} a.k.a {heroName}</h1>	
 		</div>
 	)
 } 
