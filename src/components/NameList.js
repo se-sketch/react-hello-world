@@ -9,7 +9,7 @@ function NameList() {
         {id: 3, name: 'Diana', age: 33, skill: 'php'}
     ]
 
-    const personList = persons.map(person => <Person person={person} />)
+    const personList = persons.map(person => <Person key={person.id} person={person} />)
 
     return <div>{personList}</div>
 }
