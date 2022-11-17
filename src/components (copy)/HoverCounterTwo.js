@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
-class Counter extends Component {
+// 36
+
+class HoverCounterTwo extends Component {
 
     constructor(props) {
         super(props)
@@ -12,17 +14,17 @@ class Counter extends Component {
 
     incrementCount = () => {
         this.setState(prevState => {
-            return { count: prevState.count + 1 }
+            return {count: prevState.count + 1}
         })
     }
 
     render() {
+        const {count} = this.state;
+
         return (
-            <div>
-                {this.props.children(this.state.count, this.incrementCount)}
-            </div>
+            <h2 onMouseOver={this.incrementCount}>Hovered {count} times</h2>
         )
     }
 }
 
-export default Counter
+export default HoverCounterTwo
